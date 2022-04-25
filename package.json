@@ -7,8 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "run": "nodemon app.js",
-    "start": "node app.js"
+    "run": "nodemon index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
