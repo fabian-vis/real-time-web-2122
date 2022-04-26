@@ -1,5 +1,6 @@
 let socket = io()
-let messages = document.querySelector('section ul')
+let messages = document.querySelector('.raden ul')
+let online = document.querySelector('.online')
 let input = document.querySelector('input')
 const username = prompt("what's your nickname?")
 
@@ -20,7 +21,7 @@ socket.on('message', message => {
 
 socket.on("connect", () => {
     socket.emit("register username", username);
-});
+})
 
 socket.on("chat message", ({
     username,
@@ -31,6 +32,19 @@ socket.on("chat message", ({
     messages.appendChild(li);
 });
 
+socket.on("antwoord", ({
+    username,
+    message
+}) => {
+    const li = document.createElement("li");
+    li.textContent = `${username} ${message}`;
+    messages.appendChild(li);
+});
+
+socket.on('usercnt', function (msg) {
+    document.getElementById("count").innerHTML = msg
+})
+
 document.querySelector("#message-form")
     .addEventListener("submit", e => {
         e.preventDefault();
@@ -40,3 +54,13 @@ document.querySelector("#message-form")
             e.target.reset();
         }
     });
+
+socket.on('showData', (paint) => {
+    console.log(paint)
+    document.querySelector('.schilderij').appendChild(Object.assign(document.createElement('li'), {
+        textContent: paint.title
+    }))
+    document.querySelector('.schilderij').appendChild(Object.assign(document.createElement('img'), {
+        src: paint.webImage.url
+    }))
+})

@@ -1,85 +1,112 @@
+/* ------------------------------------------------properties voor de gradient */
+:root {
+  --color-1: rgb(31, 193, 27);
+  --color-2: rgb(255, 217, 19);
+  --color-3: rgb(255, 156, 85);
+  --color-4: rgb(255, 85, 85);
+  --color-5: rgb(31, 193, 27);
+  --angle: 0deg;
+}
+
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    overflow: hidden;
+    font-family: Copperplate, Arial, sans-serif;
     min-height: 100vh;
     min-width: 100vw;
-    /* background: rgb(239, 238, 238); */
-    background: rgba(188, 105, 138, 0.5);
-    background-image: radial-gradient(
-        circle at bottom left,
-        rgba(255, 255, 0, 0.9),
-        rgba(255, 255, 0, 0) 70%
-      ),
-      radial-gradient(circle at top left, rgba(255, 0, 0, 1), rgba(255, 0, 0, 0) 70%),
-      radial-gradient(circle at center right, rgba(255, 0, 255, 0.8), rgba(255, 0, 255, 0) 50%);
-    background-size: 200% 200%;
-    animation: movement 30s ease infinite alternate-reverse;
+    background-color:	#333333;
+
   }
-  
-  @keyframes movement {
-    0% {
-      background-position: 0% 0%;
-    }
-    25% {
-      background-position: 50% 0%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    75% {
-      background-position: 50% 100%;
-    }
-    100% {
-      background-position: 100% 100%;
-    }
+
+  article h1{
+    position: absolute;
+    top: 5vh;
+    font-family: Copperplate;
+    margin: 0;
+    font-size: 3em;
+    left: 50%;
+     transform: translate(-50%, 0);
+    background: linear-gradient(
+     var(--angle),
+     var(--color-1) 19%,
+     transparent 19%,
+     transparent 20%,
+     var(--color-2) 20%,
+     var(--color-2) 39%,
+     transparent 39%,
+     transparent 40%,
+     var(--color-3) 40%,
+     var(--color-3) 59%,
+     transparent 59%,
+     transparent 60%,
+     var(--color-4) 60%,
+     var(--color-4) 79%,
+     transparent 79%,
+     transparent 80%,
+     var(--color-5) 80%
+   );
+   background-clip: text;
+   -webkit-background-clip: text;
+   color: transparent; 
+   animation: 10s rotate linear infinite;
+   opacity: 1;
+ }
+
+ @keyframes rotate {
+  to {
+    --angle: 360deg;
   }
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
   
   main {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    min-width: 100vw;
+  }
+
+  main div {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    width: 100%;
+    margin-top: 10vh;
+  }
+
+  main div div {
+    width: 50%;
+  }
+  main div:nth-of-type(2) {
+    width: 50%;
   }
   
-  section {
+  #styling {
     width: 20rem;
     height: 30rem;
-    /* background: rgb(239, 238, 238); */
     background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(1rem);
     border-radius: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0.8rem 0.8rem 1.6rem 0 rgba(206, 205, 205, 0.5),
-      -0.8rem -0.8rem 1.6rem 0 rgba(255, 255, 255, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
-  section h1 {
-    margin: 0;
-    padding: 0;
-    padding-top: 1rem;
-    font-weight: lighter;
-    text-transform: uppercase;
-    font-size: 1rem;
+  #styling2 {
+    width: 15rem;
+    height: 3rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  section h1 span {
-    font-size: 0.5rem;
-    display: inline-block;
-    width: 4.5rem;
-    color: magenta;
-    text-transform: lowercase;
+
+  .raden {
+    margin-left: 2em;
   }
-  
-  section ul {
+  .raden ul {
     margin: 0;
     padding: 0.2em;
     list-style-type: none;
@@ -92,12 +119,12 @@ body {
     background: transparent;
   }
   
-  section ul > li {
+  .raden ul > li {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
   }
   
-  section form {
+  .raden form {
     margin: 0 0 1rem 0;
     padding: 0;
     width: 18rem;
@@ -105,7 +132,7 @@ body {
     display: flex;
   }
   
-  section form input[type='text'] {
+  .raden form input[type='text'] {
     margin: 0;
     padding: 0 1rem;
     border: none;
@@ -120,7 +147,7 @@ body {
     outline: none;
   }
   
-  section form > button {
+  .raden form > button {
     padding: 0 0.6rem 0 0.4rem;
     width: 2rem;
     background: rgb(239, 238, 238);
@@ -133,19 +160,60 @@ body {
     transition: 0.2s;
   }
   
-  section form > button span {
+  .raden form > button span {
     display: none;
   }
   
-  section form > button::after {
+  .raden form > button::after {
     content: '⇒';
   }
   
-  section form > button:hover {
+  .raden form > button:hover {
     padding-left: 1rem;
   }
   
-  section form > button:active {
+  .raden form > button:active {
     padding-left: 1rem;
     color: red;
+  }
+
+  main div div:nth-of-type(2) section {
+    width: 80%;
+  }
+
+  main div  div:nth-of-type(2) section img{
+    width: 100%;
+    height: auto;
+  }
+
+  @media only screen and (max-width: 900px) {
+    main div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 1vh;
+      order: 2;
+    }
+
+    .raden {
+      margin-left: 0px;
+    }
+
+    #styling {
+      height: 10em;
+      margin-top: 1em;
+    }
+    main div:nth-of-type(2) {
+      order: 1;
+  }
+  }
+
+  .schilderij img, .schilderij li {
+    display: none
+  }
+
+  .schilderij img:first-of-type, .schilderij li:first-of-type {
+    display: block
   }

@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "run": "nodemon index.js",
+    "dev": "nodemon index.js",
     "start": "node index.js"
   },
   "repository": {
@@ -21,8 +21,12 @@
   },
   "homepage": "https://github.com/fabian-vis/real-time-web-2122#readme",
   "dependencies": {
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.7",
     "express": "^4.17.3",
+    "node-fetch": "^2.6.7",
     "nodemon": "^2.0.15",
+    "request": "^2.88.2",
     "socket.io": "^4.4.1"
   }
 }
