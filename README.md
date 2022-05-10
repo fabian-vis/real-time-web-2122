@@ -4,7 +4,7 @@
 
 > Een spel waarbij meerdere mensen de artiest van een random schilderij uit de collectie van het rijksmuseum moeten raden.
 
-Bekijk de applicatie [hier](real-time-web.herokuapp.com/)
+Bekijk de applicatie [hier](https://real-time-web.herokuapp.com/)
 
 ## Wat doet de Applicatie
 
