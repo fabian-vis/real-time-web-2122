@@ -12,11 +12,11 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    width: 100%;
     font-family: Copperplate, Arial, sans-serif;
     min-height: 100vh;
     min-width: 100vw;
     background-color:	#333333;
-
   }
 
   article h1{
@@ -74,7 +74,7 @@ body {
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin-top: 10vh;
+    margin: 10vh;
   }
 
   main div div {
@@ -186,28 +186,8 @@ body {
     height: auto;
   }
 
-  @media only screen and (max-width: 900px) {
-    main div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      margin-top: 1vh;
-      order: 2;
-    }
-
-    .raden {
-      margin-left: 0px;
-    }
-
-    #styling {
-      height: 10em;
-      margin-top: 1em;
-    }
-    main div:nth-of-type(2) {
-      order: 1;
-  }
+  .schilderij {
+    margin: 0em;
   }
 
   .schilderij img, .schilderij li {
@@ -220,14 +200,14 @@ body {
 
   .schilderij li:first-of-type {
     color: white;
-    padding: 1em 0em;
+    padding-bottom: 1em;
     font-size: 1.4em;
   }
 
   .artiest {
     position: absolute;
     top: 60vh;
-    left: 5vw;
+    left: 9vw;
   }
   .artiest ul {
     padding: 0;
@@ -273,4 +253,28 @@ body {
 
   .buttontje button:hover {
     background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  @media only screen and (max-width: 900px) {
+    main div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 1vh;
+      order: 2;
+    }
+
+    .raden {
+      margin-left: 0px;
+    }
+
+    #styling {
+      height: 10em;
+      margin-top: 1em;
+    }
+    main div:nth-of-type(2) {
+      order: 1;
+  }
   }
