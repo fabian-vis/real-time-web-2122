@@ -90,3 +90,33 @@ Voordat je de API kunt gebruiken moet je eerst je eigen API key aanvragen bij he
 ## Data Lifecycle Diagram
 
 ![Data Lifecycle Diagram](public/img/datalifecyclemodel.png)
+
+## Real-Time Events
+
+### connect
+
+Wanneer de gebruiker op de pagina komt krijgt hij een prompt waar hij zijn naam moet invullen. Die ingevulde naam wordt ge-emit met "register username"
+
+### connection
+
+Nadat de gebruiker een username heeft ingevuld word de pagina geladen. De events showData en usercnt worden "getriggerd"
+
+### showData
+
+Hier word clientside de data van de API ingeladen.
+
+### message
+
+Wanneer de gebruiker een berichtje stuurt word dit event "getriggerd". chat message wordt uitgevoerd en de username en de message worden meegestuurd. Verder wordt er ook een check gedaan of er in de message het correcte antwoord zit. Als het juiste antwoord geraden is word er een message en een username naar de client side gestuurd.
+
+### disconnect
+
+Wanneer een gebruiker weggaat wordt het disconnect event getriggerd. Bij de usercount word er eentje afgehaald en de nieuwe usercnt word client side naar de gebruikers gestuurd.
+
+## To-Do
+
+- [x] Chat functie
+- [x] Real-time implementatie
+- [x] Correcte antwoord
+- [ ] Volgende schilderij
+- [ ] Punten systeem

@@ -37,11 +37,14 @@ const connectieAPI = async () => {
 
 connectieAPI()
 
+
+
 // Link the templating engine to the express app
 app.set("view engine", "ejs");
 
 // Tell the views engine/ejs where the template files are stored (Settingname, value)
 app.set("views", "views");
+
 
 io.on('connection', (socket) => {
 
@@ -57,9 +60,8 @@ io.on('connection', (socket) => {
             username,
             message
         });
-        console.log(paint)
+
         let artist = paint.principalOrFirstMaker
-        console.log(artist)
         let correct = artist.toLowerCase()
 
         let guess = message.toLowerCase()

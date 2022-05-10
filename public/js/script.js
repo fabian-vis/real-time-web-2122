@@ -3,6 +3,12 @@ let messages = document.querySelector('.raden ul')
 let online = document.querySelector('.online')
 let input = document.querySelector('input')
 const username = prompt("what's your nickname?")
+const element = document.getElementById('bruhton')
+
+element.addEventListener("click", () => {
+    var bruhton = document.querySelector(".artiest2");
+    bruhton.classList.add("artiestVisible");
+})
 
 document.querySelector('form').addEventListener('submit', event => {
     event.preventDefault()
@@ -56,11 +62,13 @@ document.querySelector("#message-form")
     });
 
 socket.on('showData', (paint) => {
-    console.log(paint)
     document.querySelector('.schilderij').appendChild(Object.assign(document.createElement('li'), {
         textContent: paint.title
     }))
     document.querySelector('.schilderij').appendChild(Object.assign(document.createElement('img'), {
         src: paint.webImage.url
+    }))
+    document.querySelector('.artiest2').appendChild(Object.assign(document.createElement('li'), {
+        textContent: paint.principalOrFirstMaker
     }))
 })
