@@ -50,7 +50,7 @@ _Voor extra informatie kun je kijken op [de Rijksmuseum website](https://data.ri
 
 ## Wat heb ik gedaan met de API
 
-- - **title** - Om de titel weertegeven
+- **title** - Om de titel weertegeven
 - **principleOrFirstMaker** - Om te kijken of het goede antwoord gegeven is
 - **webImage** - Om het schilderij te tonen
 
@@ -82,3 +82,5 @@ webImage.url               // de schilderij image
 Voordat je de API kunt gebruiken moet je eerst je eigen API key aanvragen bij het [Rijksmuseum](https://www.rijksmuseum.nl/en/rijksstudio). Daarna moet je ook nog een .env bestand aanmaken en de key hierin zetten.
 
 ## Data Lifecycle Diagram
+
+![Data Lifecycle Diagram](public/img/datalifecyclemodel.png)
