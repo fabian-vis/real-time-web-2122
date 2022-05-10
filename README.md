@@ -81,6 +81,10 @@ webImage.url               // de schilderij image
 
 Voordat je de API kunt gebruiken moet je eerst je eigen API key aanvragen bij het [Rijksmuseum](https://www.rijksmuseum.nl/en/rijksstudio). Daarna moet je ook nog een .env bestand aanmaken en de key hierin zetten.
 
+## Data Model API
+
+![Data Model](public/img/datamodelrijksmuseumAPI.png)
+
 ## Data Lifecycle Diagram
 
 ![Data Lifecycle Diagram](public/img/datalifecyclemodel.png)
