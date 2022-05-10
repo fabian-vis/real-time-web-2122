@@ -217,3 +217,9 @@ body {
   .schilderij img:first-of-type, .schilderij li:first-of-type {
     display: block
   }
+
+  .schilderij li:first-of-type {
+    color: white;
+    padding: 1em 0em;
+    font-size: 1.4em;
+  }

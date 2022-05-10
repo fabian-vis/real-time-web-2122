@@ -26,18 +26,11 @@ const getData = endpoint => {
         .catch(_ => null)
 }
 
-const artists = ['Frans Hals', 'Johannes Vermeer', 'Aelbert Cuyp', 'Rembrandt van Rijn', 'Jan Both', 'Vincent van Gogh']
-
 let paint
 const connectieAPI = async () => {
     const endpoint = `https://www.rijksmuseum.nl/api/nl/collection?key=${API_KEY}&imgonly=true`
     const data = await getData(endpoint)
 
-    // const filteredData = data.artObjects.filter(artObject => {
-    //     return artists.includes(artObject.principalOrFirstMaker)
-    // })
-    // let currentPainting = filteredData.sort(() => .5 - Math.random())
-    // console.log(currentPainting)
     let currentPainting = data.artObjects[Math.floor(Math.random() * data.artObjects.length)];
     paint = await currentPainting
 }
@@ -67,11 +60,9 @@ io.on('connection', (socket) => {
         console.log(paint)
         let artist = paint.principalOrFirstMaker
         console.log(artist)
-        let correct = artist.toLowerCase();
-        console.log(message)
+        let correct = artist.toLowerCase()
 
-        let guess = message.toLowerCase();
-        console.log(guess)
+        let guess = message.toLowerCase()
 
         if (guess.includes(correct)) {
             message = `wist het juiste antwoord! het antwoord was ${artist}`
@@ -79,8 +70,7 @@ io.on('connection', (socket) => {
             io.emit("antwoord", {
                 username,
                 message
-            });
-
+            })
         }
     })
 
