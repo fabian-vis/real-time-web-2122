@@ -124,3 +124,80 @@ Wanneer een gebruiker weggaat wordt het disconnect event getriggerd. Bij de user
 ## Reflectie
 
 Ik heb echt enorm veel geleerd van deze drie weken. Ik heb nog nooit iets met real-time gedaan dus het was een goeie uitdaging voor me. Sockets waren compleet nieuw voor me maar ik vond het heel gaaf dat ik uiteindelijk een werkende chat functie heb kunnen maken. Als ik nog extra tijd had had ik graag nog meer geleerd en de applicatie nog meer kunnen uitbreiden. Misschien ga ik dit in de vakantie doen omdat ik dit oprecht wel interessant vond. Een paar pijn punten waren wel dat in het begin sockets leren aardig lastig was maar zodra ik het begreep ging het wel stukke beter. Al met al veel geleerd en een ervaring rijker.
+
+## Used packages
+
+### Ejs
+
+Ejs is a templating package which lets you mix javascript and html in the same file. I find this really helpful and it makes the whole project a little more easy to read. 
+
+```
+npm install ejs
+```
+```
+app.set('view engine', 'ejs');
+```
+
+https://www.npmjs.com/package/ejs
+
+### Express
+
+Express is a framework package and it helps you with the routing in your application. You can use it like this for example to load up your home page:
+```
+app.get('/', (req, res) => {
+  res.send('hello world')
+})
+```
+```
+npm install express
+```
+```
+const express = require('express')
+```
+
+https://expressjs.com/en/starter/installing.html
+
+### Node-fetch
+
+Node-fetch is a must have package which lets you use fetch requests on the server side. Not really much to say here :P
+
+```
+npm install node-fetch
+```
+```
+const fetch = require('node-fetch')
+```
+
+https://www.npmjs.com/package//node-fetch
+
+### Socket.io
+
+Socket.IO is a library that enables low-latency, bidirectional and event-based communication between a client and a server. Simply said its helps you make a lasting connection to other people in your application. I need this in my app so the 2 players see the same pokemon and guess on it too.
+
+```
+npm install socket.io
+```
+```
+const io = require('socket.io')(http)
+```
+```
+let socket = io()
+```
+
+https://www.npmjs.com/package/socket.io
+
+### Nodemon
+
+Nodemon is a really helpful package which lets you make changes to your node based application without you having to restart it all the time. Nodemon does that itself so you can just focus on your work.
+```
+npm install -g nodemon
+```
+https://www.npmjs.com/package/nodemon
+
+### request
+
+Request is designed to be the simplest way possible to make http calls. It supports HTTPS and follows redirects by default.
+
+```
+npm install request
+```
