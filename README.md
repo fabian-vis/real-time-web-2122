@@ -120,3 +120,7 @@ Wanneer een gebruiker weggaat wordt het disconnect event getriggerd. Bij de user
 - [x] Correcte antwoord
 - [ ] Volgende schilderij
 - [ ] Punten systeem
+
+## Reflectie
+
+Ik heb echt enorm veel geleerd van deze drie weken. Ik heb nog nooit iets met real-time gedaan dus het was een goeie uitdaging voor me. Sockets waren compleet nieuw voor me maar ik vond het heel gaaf dat ik uiteindelijk een werkende chat functie heb kunnen maken. Als ik nog extra tijd had had ik graag nog meer geleerd en de applicatie nog meer kunnen uitbreiden. Misschien ga ik dit in de vakantie doen omdat ik dit oprecht wel interessant vond. Een paar pijn punten waren wel dat in het begin sockets leren aardig lastig was maar zodra ik het begreep ging het wel stukke beter. Al met al veel geleerd en een ervaring rijker.
