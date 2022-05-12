@@ -230,3 +230,17 @@ Request is designed to be the simplest way possible to make http calls. It suppo
 npm install request
 ```
 https://www.npmjs.com/package/request
+
+### Bronnen
+
+- [W3Schools](https://www.w3schools.com "W3Schools")
+
+- [MDN](https://developer.mozilla.org/en-US/ "MDN")
+
+- [Stackoverflow](https://stackoverflow.com "Stackoverflow")
+
+- Docenten, Student assistenten en medestudenten ;)
+
+### License
+
+MIT License.
