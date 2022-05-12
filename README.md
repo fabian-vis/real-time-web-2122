@@ -6,6 +6,22 @@
 
 Bekijk de applicatie [hier](https://real-time-web.herokuapp.com/)
 
+## 3 Concepten
+
+![IMG_8279](https://user-images.githubusercontent.com/70572501/168068734-10933f2e-a86e-4f6d-8d66-d2a6b0dfef38.JPG)
+
+### Concept 1
+Raad de Author. Een spel waarbij meerdere mensen de author van een schilderij uit het rijksmusem moeten raden.
+
+### Concept 2
+Discord achtige chatroom. Een chatapp waarbij je in een lobby met meerdere mensen kan chatten of persoonlijk berichtjes naar mensen kan sturen
+
+### Concept 3
+Spotify Chatroom. Een soort Whatsapp maar dan met een ingebouwde spotify functie waarbij mensen samen naar muziek kunnen luisteren en muziek kunnen delen.
+
+### Gekozen Applicatie
+Ik heb uiteindelijk gekozen voor concept nummer 1. Ik vind deze het leukst om te realiseren en kan hem zo ingewikkeld mogelijk maken als dat ik zelf wil.
+
 ## Wat doet de Applicatie
 
 Applicatie features:
