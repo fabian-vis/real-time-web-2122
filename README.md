@@ -5,6 +5,7 @@
 > Een spel waarbij meerdere mensen de artiest van een random schilderij uit de collectie van het rijksmuseum moeten raden.
 
 Bekijk de applicatie [hier](https://real-time-web.herokuapp.com/)
+<img width="1657" alt="Schermafbeelding 2022-05-12 om 15 19 34" src="https://user-images.githubusercontent.com/70572501/168084285-9870a400-b999-4186-87ab-349de2e743ca.png">
 
 ## 3 Concepten
 
